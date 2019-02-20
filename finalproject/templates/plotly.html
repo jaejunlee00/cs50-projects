@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Plot
+{% endblock %}
+
+{% block main %}
+    <h1 align="middle">Overview</h1>
+    <img src="/static/images/pie.jpg" alt="bar chart" style="width:400px;height:400px;" align="middle">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Home</th>
+                <th>Personalcare</th>
+                <th>Food</th>
+                <th>Child</th>
+                <th>Debt</th>
+                <th>Healthcare</th>
+                <th>Transportation</th>
+                <th>Petcare</th>
+                <th>Entertainment</th>
+                <th>Others</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for row in totals %}
+                    <td>{{ row["home"] }}</td>
+                    <td>{{ row["personalcare"] }}</td>
+                    <td>{{ row["food"] }}</td>
+                    <td>{{ row["child"] }}</td>
+                    <td>{{ row["debt"] }}</td>
+                    <td>{{ row["healthcare"] }}</td>
+                    <td>{{ row["transportation"] }}</td>
+                    <td>{{ row["petcare"] }}</td>
+                    <td>{{ row["entertainment"] }}</td>
+                    <td>{{ row["others"] }}</td>
+                {% endfor %}
+
+
+            </tr>
+
+        </tbody>
+    </table>
+{% endblock %}

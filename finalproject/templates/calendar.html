@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calender
+{% endblock %}
+
+{% block main %}
+    <iframe src="https://calendar.google.com/calendar/embed?title=FINANCE&amp;showPrint=0&amp;showTabs=0&amp;showTz=0&amp;height=350&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=8vh4avn0puem9na6lkc07dmdhc%40group.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FChicago" style="border-width:0" width="350" height="350" frameborder="0" scrolling="no"></iframe>
+    <form action="/calendar" method="post" autofocus name="name" placeholder="name" type="text">
+        <div class="form-group">
+            <select class="form-control" name="expenses">
+                <option disabled selected value>Expenses</option>
+                    <option value="home">home expense</option>
+                    <option value="food">food expense</option>
+                    <option value="child">child expense</option>
+                    <option value="debt">debt expense</option>
+                    <option value="healthcare">healthcare expense</option>
+                    <option value="transportation">transportation expense</option>
+                    <option value="personalcare">personalcare expense</option>
+                    <option value="petcare">petcare expense</option>
+                    <option value="entertainment">entertainment expense</option>
+                    <option value="others">others expense</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="amount" placeholder="Amount" type="number" step="0.01" min="0">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="note" placeholder="Note" type="text">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Post</button>
+    </form>
+
+{% endblock %}
+
+

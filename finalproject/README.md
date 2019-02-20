@@ -1,0 +1,4 @@
+This project is to create a website that could help users with financial reports. Users can select the type of expenses (home expenses, food expenses, healthcare expenses, etc) and the amount and submit the data.
+The website will return the pie chart and total expenditure of each type of the expenses on the main webpage. To submit the report, users may click "Calendar" and simply input the data.
+To view all records that have been made, the users may click "History". If the users want to delete any records, the users may click "Delete", select the record based on the type of expenses and index number
+shown in /calendar, and click "delete" button.

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <form action="/delete" method="post" autofocus name="name" placeholder="name" type="text">
+        <div class="form-group">
+            <select class="form-control" name="expenses">
+                <option disabled selected value>Expenses</option>
+                    <option value="home">home expense</option>
+                    <option value="food">food expense</option>
+                    <option value="child">child expense</option>
+                    <option value="debt">debt expense</option>
+                    <option value="healthcare">healthcare expense</option>
+                    <option value="transportation">transportation expense</option>
+                    <option value="personalcare">personalcare expense</option>
+                    <option value="petcare">petcare expense</option>
+                    <option value="entertainment">entertainment expense</option>
+                    <option value="others">others expense</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="counter" placeholder="Index" type="number" min=1>
+        </div>
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+
+{% endblock %}
+
+
