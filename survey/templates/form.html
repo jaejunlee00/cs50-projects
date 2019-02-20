@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post" autofocus name="name" placeholder="name" type="text">
+        <input type="text" autofocus name="name" placeholder="name">
+        <select name="dorm">
+            <option disabled selected value="">Dorm</option>
+            <option value="Jester East">Jester East</option>
+            <option value="Jester West">Jester West</option>
+            <option value="Andrews Hall">Andrews Hall</option>
+            <option value="Blanton Hall">Blanton Hall</option>
+            <option value="Duren Hall">Duren Hall</option>
+            <option value="Kinsolving Hall">Kinsolving Hall</option>
+            <option value="Whitis Court">Whitis Court</option>
+            <option value="Moore-Hill Hall">Moore-Hill Hall</option>
+            <option value="San Jacinto Hall">San Jacinto Hall</option>
+        </select> <br>
+        <input type="radio" name="year" value="Freshman"> Freshman <br>
+        <input type="radio" name="year" value="Sophomore"> Sophomore <br>
+        <input type="radio" name="year" value="Junior"> Junior <br>
+        <input type="radio" name="year" value="Senior"> Senior <br>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('input').value) {
+                alert('You must provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert('You must provide your dorm!');
+
+                return false;
+            }
+            return true;
+        };
+
+    </script>
+
+{% endblock %}
